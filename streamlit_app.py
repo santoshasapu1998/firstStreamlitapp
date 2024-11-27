@@ -2,4 +2,4 @@ import streamlit as st
 
 st.title('🎈 Machine Learning Application')
 
-st.write('This is demo application')
+st.info('This is demo application')
