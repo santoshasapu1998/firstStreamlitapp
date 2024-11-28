@@ -20,7 +20,7 @@ with st.expander('Data'):
   y_raw = df.species
   y_raw
 
-LOGO_URL_LARGE="firstStreamlitapp/cvs health logo (1).png"  
+LOGO_URL_LARGE="firstStreamlitapp/cvs health logo(1).png"  
 st.logo(
     LOGO_URL_LARGE,
     link="https://streamlit.io/gallery",
