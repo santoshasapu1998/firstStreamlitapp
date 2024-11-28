@@ -2,7 +2,11 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
-
+st.logo(
+    LOGO_URL_LARGE,
+    link="https:https://www.cvshealth.com/",
+    icon_image=LOGO_URL_SMALL,
+)
 st.title(' Machine Learning App')
 
 st.info('This is app builds a machine learning model!')
