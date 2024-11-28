@@ -3,11 +3,11 @@ import numpy as np
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 LOGO_URL_SMALL=firstStreamlitapp/logo.png
-LOGO_URL_LARGE=firstStreamlitapp/cvs healh logo.jfif
+
 st.logo(
-    LOGO_URL_LARGE,
+    LOGO_URL_SMALL,
     link="https:https://www.cvshealth.com/",
-    icon_image=LOGO_URL_SMALL,
+    
 )
 st.title(' Machine Learning App')
 
