@@ -23,7 +23,7 @@ with st.expander('Data'):
 LOGO_URL_LARGE="firstStreamlitapp/cvs health logo(1).png"  
 st.logo(
     LOGO_URL_LARGE,
-    link="https://streamlit.io/gallery",
+    link="https://streamlit.io/gallery", size="large"
     
 )
 
