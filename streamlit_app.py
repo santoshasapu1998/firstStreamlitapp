@@ -2,15 +2,7 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
-LOGO_URL_SMALL="firstStreamlitapp/logo.png"
-LOGO_URL_LARGE="firstStreamlitapp/cvs healh logo.png"
 
-st.logo(
-    LOGO_URL_LARGE,
-    link="https:https://www.cvshealth.com/",
-    icon_image=LOGO_URL_SMALL,
-    
-)
 st.title(' Machine Learning App')
 
 st.info('This is app builds a machine learning model!')
@@ -40,6 +32,17 @@ with st.sidebar:
   flipper_length_mm = st.slider('Flipper length (mm)', 172.0, 231.0, 201.0)
   body_mass_g = st.slider('Body mass (g)', 2700.0, 6300.0, 4207.0)
   gender = st.selectbox('Gender', ('male', 'female'))
+
+LOGO_URL_SMALL = "firstStreamlitapp/logo.png"
+LOGO_URL_LARGE = "firstStreamlitapp/cvs healh logo.png"
+
+st.logo(
+    LOGO_URL_LARGE,
+    link="https:https://www.cvshealth.com/",
+    icon_image = LOGO_URL_SMALL,
+    
+)    
+    
   
   # Create a DataFrame for the input features
   data = {'island': island,
