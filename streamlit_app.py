@@ -20,6 +20,13 @@ with st.expander('Data'):
   y_raw = df.species
   y_raw
 
+LOGO_URL_LARGE="firstStreamlitapp/cvs health logo (1).png"  
+st.logo(
+    LOGO_URL_LARGE,
+    link="https://streamlit.io/gallery",
+    
+)
+
 with st.expander('Data visualization'):
   st.scatter_chart(data=df, x='bill_length_mm', y='body_mass_g', color='species')
 
