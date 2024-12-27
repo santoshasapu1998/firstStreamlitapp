@@ -1,0 +1,32 @@
+import streamlit as st
+import pandas as pd
+import numpy as np
+import joblib
+import matplotlib.pyplot as plt
+
+# Load the dataset
+df_final = pd.read_csv("training_data.csv")  # Replace with your actual data file
+
+# Display the dataframe
+st.subheader("Sample DataFrame")
+st.write(df_final.head(10))  # Display the first 10 rows as a sample
+
+# Add a region filter to select geographical regions
+if "geo_member_state" in df_final.columns:
+    st.subheader("Map Visualization")
+    available_regions = df_final["geo_member_state"].unique()
+    selected_region = st.selectbox("Select a Region", available_regions)
+
+    # Filter the data based on the selected region
+    filtered_data = df_final[df_final["geo_member_state"] == selected_region]
+
+    st.write(f"Filtered Data for Region: {selected_region}")
+    st.write(filtered_data)
+
+    # Display the map if the filtered data contains latitude and longitude
+    if {"latitude", "longitude"}.issubset(filtered_data.columns):
+        st.map(filtered_data[["latitude", "longitude"]])
+    else:
+        st.warning("Latitude and longitude columns are required for the map visualization.")
+else:
+    st.error("Column 'geo_member_state' not found in the dataset.")
